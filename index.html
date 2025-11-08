@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Emerich - Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header-desktop">
+        <div class="header-container">
+            <div class="header-content">
+                <h1 class="header-title">João Emerich</h1>
+                <nav class="nav-desktop">
+                    <a href="#contato" class="nav-link">Contato</a>
+                    <a href="#projetos" class="nav-link">Projetos</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <button class="btn-curriculum">Meu Currículo</button>
+                    <input type="checkbox" id="darkmode-toggle"/>
+                    <label for="darkmode-toggle" class="toggle-label"></label>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <header class="header-mobile">
+        <div class="header-mobile-content">
+            <div class="header-mobile-flex">
+                <h1 class="header-mobile-title">João Emerich</h1>
+                <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon hidden"></i>
+                </button>
+                <input type="checkbox" id="darkmode-toggle"/>
+                <label for="darkmode-toggle" class="toggle-label"></label>
+            </div>
+        </div>
+    </header>
+    <div class="sidebar-mobile" id="mobileSidebar">
+        <div class="sidebar-content">
+            <nav class="sidebar-nav">
+                <a href="#contato" class="sidebar-link" onclick="closeMenu()">Contato</a>
+                <a href="#skills" class="sidebar-link" onclick="closeMenu()">Skills</a>
+                <a href="#projetos" class="sidebar-link" onclick="closeMenu()">Projetos</a>
+            </nav>
+            <div class="sidebar-button">
+                <button class="btn-curriculum-mobile">Meu Currículo</button>
+            </div>
+        </div>
+    </div>
+   <div class="mobile-overlay" id="mobileOverlay" onclick="closeMenu()"></div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="IMG_20250928_180022_606.webp" alt="" class="hero-image">
+                <h1 class="hero-title">João Emerich</h1>
+                <p class="hero-subtitle">
+                    Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Ver Projetos</button>
+                    <button class="btn-secondary">Entre em Contato</button>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                    <p class="section-description">
+                        Tecnologias e ferramentas que utilizo para criar soluções inovadoras
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3 class="skill-title">Web Technologies</h3>
+                    <p class="skill-description">HTML5, CSS3, JavaScript</p>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3 class="skill-title">Backend Development</h3>
+                        <p class="skill-description">MySql, C#</p>
+                        <div class="skill-tags">
+                            <span class="tag">MySql</span>
+                            <span class="tag">C#</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projetos" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projetos</h2>
+                    <p class="section-description">
+                        Alguns dos projetos que desenvolvi, mostrando diferentes tecnologias e soluções
+                    </p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="logofrontend.png" alt="E-commerce Platform">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-commerce Platform</h3>
+                            <p class="project-description">
+                                Website Base de e-commerce com HTML e CSS.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/JoaoEmerich/Insoft" class="project-link">
+                                    <i data-lucide="external-link"></i>
+                                    Ver Projeto
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="portifolio.png" alt="Portfolio Website">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-description">
+                                Site de portfólio utilizando HTML, CSS e JavaScript.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i data-lucide="external-link"></i>
+                                    Você Está Aqui!
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contato</h2>
+                    <p class="section-description">
+                        Vamos conversar sobre seu próximo projeto? Entre em contato comigo!
+                    </p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-section">
+                            <h3 class="contact-section-title">Informações de Contato</h3>
+                            <div class="contact-items">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <img src="https://img.icons8.com/3d-fluency/1200/google-logo.jpg" alt="" class="social-media">
+                                        <i data-lucide="mail"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <p class="contact-primary">joaopedroferreiraemerich@email.com</p>
+                                        <p class="contact-secondary">Email principal</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <img src="https://img.icons8.com/color/1200/whatsapp--v1.jpg" alt="" class="social-media">
+                                        <i data-lucide="phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <p class="contact-primary">+55 (31) 99649-1733</p>
+                                        <p class="contact-secondary">WhatsApp disponível</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <img src="https://images.seeklogo.com/logo-png/36/1/google-maps-icon-2020-logo-png_seeklogo-368992.png" alt="" class="social-media">
+                                        <i data-lucide="map-pin"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <p class="contact-primary">Belo Horizonte, MG</p>
+                                        <p class="contact-secondary">Brasil</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-section">
+                            <h4 class="social-title">Redes Sociais</h4>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-ferreira-emerich-09183437a/" class="social-link">
+                                    <img src="https://img.freepik.com/vetores-premium/logotipo-redondo-do-linkedin-isolado-em-fundo-branco_469489-985.jpg?semt=ais_hybrid&w=740&q=80" alt="" class="social-media">
+                                    <i data-lucide="linkedin"></i>
+                                </a>
+                                <a href="https://github.com/JoaoEmerich" class="social-link">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" class="social-media">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="https://www.instagram.com/joao_emerich/" class="social-link">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968776.png" alt="" class="social-media">
+                                    <i data-lucide="instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3 class="form-title">Envie uma Mensagem</h3>
+                        <form class="contact-form" id="contact-form">
+                          <div class="form-row">
+                            <div class="form-group">
+                              <label for="name" class="form-label">Nome</label>
+                              <input type="text" id="name" name="from_name" class="form-input" placeholder="Seu nome" required />
+                            </div>
+                            <div class="form-group">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" id="email" name="reply_to" class="form-input" placeholder="seu@email.com" required />
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="telefone" class="form-label">Tel:</label>
+                            <input
+                              type="tel"
+                              id="telefone"
+                              name="phone"
+                              class="form-input"
+                              placeholder="(00) 00000-0000"
+                              maxlength="15"
+                              oninput="mascara_telefone()"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="subject" class="form-label">Assunto</label>
+                            <input type="text" id="subject" name="subject" class="form-input" placeholder="Assunto da mensagem" required />
+                          </div>
+                          <div class="form-group">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea
+                              id="message"
+                              name="message"
+                              rows="5"
+                              class="form-textarea"
+                              placeholder="Conte-me sobre seu projeto..."
+                              required
+                            ></textarea>
+                          </div>
+                          <button type="submit" class="form-submit">Enviar Mensagem</button>
+                          <p id="status-message"></p>
+                        </form>
+                      </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">João Emerich</h3>
+                    <p class="footer-text">
+                        Desenvolvedor Full Stack apaixonado por criar experiências digitais que fazem a diferença.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#skills" class="footer-link">Skills</a></li>
+                        <li><a href="#projetos" class="footer-link">Projetos</a></li>
+                        <li><a href="#contato" class="footer-link">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-contact">
+                        <li>joaopedroferreiraemerich@email.com</li>
+                        <li>+55 (31) 99649-1733</li>
+                        <li>Belo Horizonte, MG - Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 João Emerich. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
