@@ -137,13 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const curriculumBtns = document.querySelectorAll('.btn-curriculum, .btn-curriculum-mobile');
-    curriculumBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            alert('Funcionalidade de download do currículo seria implementada aqui.');
-        });
-    });
-
     const toggles = document.querySelectorAll('#darkmode-toggle');
     const body = document.body;
     
